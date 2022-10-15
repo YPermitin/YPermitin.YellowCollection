@@ -1,0 +1,6 @@
+﻿IF EXISTS (SELECT *
+      FROM sys.server_event_sessions
+      WHERE name = '_yp_1CtoSQL_{ИмяСессии}_{ИдентификаторСессии}')
+BEGIN
+    DROP EVENT SESSION _yp_1CtoSQL_{ИмяСессии}_{ИдентификаторСессии} ON SERVER;
+END
