@@ -1,0 +1,684 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаРежимРаботыЭлемент" id="24">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.РежимРаботыЭлемент</CommandName>
+				<ExtendedTooltip name="ФормаРежимРаботыЭлементРасширеннаяПодсказка" id="25"/>
+			</Button>
+			<Button name="ФормаРежимРаботыСписком" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РежимРаботыСписком</CommandName>
+				<ExtendedTooltip name="ФормаРежимРаботыСпискомРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаОсновнаяПанель" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаОсновнаяПанельРасширеннаяПодсказка" id="19"/>
+			<ChildItems>
+				<Page name="ГруппаОдинЭлемент" id="20">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элемент</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Элемент</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОдинЭлементРасширеннаяПодсказка" id="21"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИнформацияОСсылке" id="85">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация о ссылке</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Информация о ссылке</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаИнформацияОСсылкеРасширеннаяПодсказка" id="86"/>
+							<ChildItems>
+								<InputField name="СсылкаНаОбъект" id="1">
+									<DataPath>Объект.ОбъектыИИдентификаторы[0].СсылкаНаОбъект</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="СсылкаНаОбъектКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="СсылкаНаОбъектРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">СсылкаНаОбъектПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПредставлениеБитойСсылки" id="63">
+									<DataPath>Объект.ОбъектыИИдентификаторы[0].ПредставлениеБитойСсылки</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ПредставлениеБитойСсылкиКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="ПредставлениеБитойСсылкиРасширеннаяПодсказка" id="65"/>
+									<Events>
+										<Event name="OnChange">ПредставлениеБитойСсылкиПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИдентификаторыПлатформы1С" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификаторы платформы 1С</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификаторы платформы 1С</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаИдентификаторыПлатформы1СРасширеннаяПодсказка" id="88"/>
+							<ChildItems>
+								<InputField name="ИдентификаторСсылки" id="4">
+									<DataPath>Объект.ОбъектыИИдентификаторы[0].ИдентификаторСсылки</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="ИдентификаторСсылкиКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="ИдентификаторСсылкиРасширеннаяПодсказка" id="6"/>
+									<Events>
+										<Event name="OnChange">ИдентификаторСсылкиПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="НавигационнаяСсылка" id="7">
+									<DataPath>Объект.ОбъектыИИдентификаторы[0].НавигационнаяСсылка</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="НавигационнаяСсылкаКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="НавигационнаяСсылкаРасширеннаяПодсказка" id="9"/>
+									<Events>
+										<Event name="OnChange">НавигационнаяСсылкаПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИдентификаторыБазыДанных" id="83">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификаторы базы данных</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Идентификаторы базы данных</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаИдентификаторыБазыДанныхРасширеннаяПодсказка" id="84"/>
+							<ChildItems>
+								<InputField name="ИдентификаторSQLServer" id="10">
+									<DataPath>Объект.ОбъектыИИдентификаторы[0].ИдентификаторSQLServer</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>SQL Server</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ИдентификаторSQLServerКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ИдентификаторSQLServerРасширеннаяПодсказка" id="12"/>
+									<Events>
+										<Event name="OnChange">ИдентификаторSQLServerПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ИдентификаторPostgreSQL" id="13">
+									<DataPath>Объект.ОбъектыИИдентификаторы[0].ИдентификаторPostgreSQL</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>PostgreSQL</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ИдентификаторPostgreSQLКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ИдентификаторPostgreSQLРасширеннаяПодсказка" id="15"/>
+									<Events>
+										<Event name="OnChange">ИдентификаторPostgreSQLПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДополнительно" id="89">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительно</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дополнительно</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>StrongSeparation</Representation>
+							<ExtendedTooltip name="ГруппаДополнительноРасширеннаяПодсказка" id="90"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДополнительноЛевая" id="91">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа дополнительно левая</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа дополнительно левая</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДополнительноЛеваяРасширеннаяПодсказка" id="92"/>
+									<ChildItems>
+										<InputField name="ИдентификаторТипа" id="95">
+											<DataPath>Объект.ОбъектыИИдентификаторы[0].ИдентификаторТипа</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ИдентификаторТипаКонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="ИдентификаторТипаРасширеннаяПодсказка" id="97"/>
+											<Events>
+												<Event name="OnChange">ИдентификаторТипаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ИдентификаторТипаSQLServer" id="105">
+											<DataPath>Объект.ОбъектыИИдентификаторы[0].ИдентификаторТипаSQLServer</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ИдентификаторТипаSQLServerКонтекстноеМеню" id="106"/>
+											<ExtendedTooltip name="ИдентификаторТипаSQLServerРасширеннаяПодсказка" id="107"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДополнительноЦентр" id="98">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно центр</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно центр</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДополнительноЦентрРасширеннаяПодсказка" id="99"/>
+									<ChildItems>
+										<InputField name="ЧисловойИдентификаторТипа" id="77">
+											<DataPath>Объект.ОбъектыИИдентификаторы[0].ЧисловойИдентификаторТипа</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>Top</TitleLocation>
+											<Width>18</Width>
+											<ContextMenu name="ЧисловойИдентификаторТипаКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ЧисловойИдентификаторТипаРасширеннаяПодсказка" id="79"/>
+										</InputField>
+										<InputField name="ИдентификаторТипаPostgreSQL" id="108">
+											<DataPath>Объект.ОбъектыИИдентификаторы[0].ИдентификаторТипаPostgreSQL</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ИдентификаторТипаPostgreSQLКонтекстноеМеню" id="109"/>
+											<ExtendedTooltip name="ИдентификаторТипаPostgreSQLРасширеннаяПодсказка" id="110"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДополнительноПравая" id="93">
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно правая</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно правая</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДополнительноПраваяРасширеннаяПодсказка" id="94"/>
+									<ChildItems>
+										<InputField name="ИмяМетаданных" id="57">
+											<DataPath>Объект.ОбъектыИИдентификаторы[0].ИмяМетаданных</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>Top</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="ИмяМетаданныхКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="ИмяМетаданныхРасширеннаяПодсказка" id="59"/>
+										</InputField>
+										<InputField name="ДатаСозданияСсылки" id="119">
+											<DataPath>Объект.ОбъектыИИдентификаторы[0].ДатаСозданияСсылки</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ДатаСозданияСсылкиКонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="ДатаСозданияСсылкиРасширеннаяПодсказка" id="121"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСписокЭлементов" id="22">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список</v8:content>
+						</v8:item>
+					</ToolTip>
+					<TitleDataPath>1/0:4e4dce21-daa6-48ed-9ced-7f0905203715/100000000</TitleDataPath>
+					<ExtendedTooltip name="ГруппаСписокЭлементовРасширеннаяПодсказка" id="23"/>
+					<ChildItems>
+						<Table name="ОбъектыИИдентификаторы" id="26">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ОбъектыИИдентификаторы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОбъектыИИдентификаторыКонтекстноеМеню" id="27"/>
+							<AutoCommandBar name="ОбъектыИИдентификаторыКоманднаяПанель" id="28"/>
+							<ExtendedTooltip name="ОбъектыИИдентификаторыРасширеннаяПодсказка" id="29"/>
+							<SearchStringAddition name="ОбъектыИИдентификаторыСтрокаПоиска" id="30">
+								<AdditionSource>
+									<Item>ОбъектыИИдентификаторы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыИИдентификаторыСтрокаПоискаКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="ОбъектыИИдентификаторыСтрокаПоискаРасширеннаяПодсказка" id="32"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОбъектыИИдентификаторыСостояниеПросмотра" id="33">
+								<AdditionSource>
+									<Item>ОбъектыИИдентификаторы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыИИдентификаторыСостояниеПросмотраКонтекстноеМеню" id="34"/>
+								<ExtendedTooltip name="ОбъектыИИдентификаторыСостояниеПросмотраРасширеннаяПодсказка" id="35"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОбъектыИИдентификаторыУправлениеПоиском" id="36">
+								<AdditionSource>
+									<Item>ОбъектыИИдентификаторы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОбъектыИИдентификаторыУправлениеПоискомКонтекстноеМеню" id="37"/>
+								<ExtendedTooltip name="ОбъектыИИдентификаторыУправлениеПоискомРасширеннаяПодсказка" id="38"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ОбъектыИИдентификаторыНомерСтроки" id="39">
+									<DataPath>Объект.ОбъектыИИдентификаторы.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ОбъектыИИдентификаторыНомерСтрокиКонтекстноеМеню" id="40"/>
+									<ExtendedTooltip name="ОбъектыИИдентификаторыНомерСтрокиРасширеннаяПодсказка" id="41"/>
+								</LabelField>
+								<ColumnGroup name="ОбъектыИИдентификаторыГруппаСсылка" id="69">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информация о ссылке</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информация о ссылке</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаСсылкаРасширеннаяПодсказка" id="70"/>
+									<ChildItems>
+										<InputField name="ОбъектыИИдентификаторыСсылкаНаОбъект" id="42">
+											<DataPath>Объект.ОбъектыИИдентификаторы.СсылкаНаОбъект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыСсылкаНаОбъектКонтекстноеМеню" id="43"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыСсылкаНаОбъектРасширеннаяПодсказка" id="44"/>
+											<Events>
+												<Event name="OnChange">СсылкаНаОбъектПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОбъектыИИдентификаторыПредставлениеБитойСсылки" id="66">
+											<DataPath>Объект.ОбъектыИИдентификаторы.ПредставлениеБитойСсылки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыПредставлениеБитойСсылкиКонтекстноеМеню" id="67"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыПредставлениеБитойСсылкиРасширеннаяПодсказка" id="68"/>
+											<Events>
+												<Event name="OnChange">ПредставлениеБитойСсылкиПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОбъектыИИдентификаторыГруппаИдентификаторыПлатформы1С" id="71">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идентификаторы платформы 1С</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идентификаторы платформы 1С</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаИдентификаторыПлатформы1СРасширеннаяПодсказка" id="72"/>
+									<ChildItems>
+										<InputField name="ОбъектыИИдентификаторыИдентификаторСсылки" id="45">
+											<DataPath>Объект.ОбъектыИИдентификаторы.ИдентификаторСсылки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыИдентификаторСсылкиКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыИдентификаторСсылкиРасширеннаяПодсказка" id="47"/>
+											<Events>
+												<Event name="OnChange">ИдентификаторСсылкиПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОбъектыИИдентификаторыНавигационнаяСсылка" id="48">
+											<DataPath>Объект.ОбъектыИИдентификаторы.НавигационнаяСсылка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыНавигационнаяСсылкаКонтекстноеМеню" id="49"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыНавигационнаяСсылкаРасширеннаяПодсказка" id="50"/>
+											<Events>
+												<Event name="OnChange">НавигационнаяСсылкаПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОбъектыИИдентификаторыГруппаИдентификаторыБазДанных" id="73">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На стороне базы данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На стороне базы данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаИдентификаторыБазДанныхРасширеннаяПодсказка" id="74"/>
+									<ChildItems>
+										<InputField name="ОбъектыИИдентификаторыИдентификаторSQLServer" id="51">
+											<DataPath>Объект.ОбъектыИИдентификаторы.ИдентификаторSQLServer</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>SQL Server</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыИдентификаторSQLServerКонтекстноеМеню" id="52"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыИдентификаторSQLServerРасширеннаяПодсказка" id="53"/>
+											<Events>
+												<Event name="OnChange">ИдентификаторSQLServerПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ОбъектыИИдентификаторыИдентификаторPostgreSQL" id="54">
+											<DataPath>Объект.ОбъектыИИдентификаторы.ИдентификаторPostgreSQL</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>PostgreSQL</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыИдентификаторPostgreSQLКонтекстноеМеню" id="55"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыИдентификаторPostgreSQLРасширеннаяПодсказка" id="56"/>
+											<Events>
+												<Event name="OnChange">ИдентификаторPostgreSQLПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОбъектыИИдентификаторыГруппаДополнительно" id="75">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительно</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаДополнительноРасширеннаяПодсказка" id="76"/>
+									<ChildItems>
+										<ColumnGroup name="ОбъектыИИдентификаторыГруппаДополнительноМетаданныеИДатаСоздания" id="125">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Метаданные и дата создания</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Метаданные и дата создания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаДополнительноМетаданныеИДатаСозданияРасширеннаяПодсказка" id="126"/>
+											<ChildItems>
+												<InputField name="ОбъектыИИдентификаторыИмяМетаданных" id="60">
+													<DataPath>Объект.ОбъектыИИдентификаторы.ИмяМетаданных</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОбъектыИИдентификаторыИмяМетаданныхКонтекстноеМеню" id="61"/>
+													<ExtendedTooltip name="ОбъектыИИдентификаторыИмяМетаданныхРасширеннаяПодсказка" id="62"/>
+												</InputField>
+												<InputField name="ОбъектыИИдентификаторыДатаСозданияСсылки" id="122">
+													<DataPath>Объект.ОбъектыИИдентификаторы.ДатаСозданияСсылки</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОбъектыИИдентификаторыДатаСозданияСсылкиКонтекстноеМеню" id="123"/>
+													<ExtendedTooltip name="ОбъектыИИдентификаторыДатаСозданияСсылкиРасширеннаяПодсказка" id="124"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ОбъектыИИдентификаторыГруппаДополнительноИдентификаторыТипов" id="100">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Идентификаторы типов</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Объекты и идентификаторы группа дополнительно идентификаторы типов</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаДополнительноИдентификаторыТиповРасширеннаяПодсказка" id="101"/>
+											<ChildItems>
+												<InputField name="ОбъектыИИдентификаторыЧисловойИдентификаторТипа" id="80">
+													<DataPath>Объект.ОбъектыИИдентификаторы.ЧисловойИдентификаторТипа</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОбъектыИИдентификаторыЧисловойИдентификаторТипаКонтекстноеМеню" id="81"/>
+													<ExtendedTooltip name="ОбъектыИИдентификаторыЧисловойИдентификаторТипаРасширеннаяПодсказка" id="82"/>
+												</InputField>
+												<InputField name="ОбъектыИИдентификаторыИдентификаторТипа" id="102">
+													<DataPath>Объект.ОбъектыИИдентификаторы.ИдентификаторТипа</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ОбъектыИИдентификаторыИдентификаторТипаКонтекстноеМеню" id="103"/>
+													<ExtendedTooltip name="ОбъектыИИдентификаторыИдентификаторТипаРасширеннаяПодсказка" id="104"/>
+													<Events>
+														<Event name="OnChange">ИдентификаторТипаПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ОбъектыИИдентификаторыГруппаДополнительноИдентификаторыТиповСУБД" id="111">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идентификаторы типов СУБД</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идентификаторы типов СУБД</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ОбъектыИИдентификаторыГруппаДополнительноИдентификаторыТиповСУБДРасширеннаяПодсказка" id="112"/>
+									<ChildItems>
+										<InputField name="ОбъектыИИдентификаторыИдентификаторТипаSQLServer" id="113">
+											<DataPath>Объект.ОбъектыИИдентификаторы.ИдентификаторТипаSQLServer</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыИдентификаторТипаSQLServerКонтекстноеМеню" id="114"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыИдентификаторТипаSQLServerРасширеннаяПодсказка" id="115"/>
+										</InputField>
+										<InputField name="ОбъектыИИдентификаторыИдентификаторТипаPostgreSQL" id="116">
+											<DataPath>Объект.ОбъектыИИдентификаторы.ИдентификаторТипаPostgreSQL</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыИИдентификаторыИдентификаторТипаPostgreSQLКонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="ОбъектыИИдентификаторыИдентификаторТипаPostgreSQLРасширеннаяПодсказка" id="118"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПомощникРаботыСИдентификаторамиОбъектов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:946c1cec-564f-49e4-a31b-3c277530d398</Field>
+				<Field>1/0:a2bb7312-c2af-4a54-81d1-4a868b86dc95</Field>
+				<Field>1/0:e662a1cf-1f6a-411d-b997-35e74e9c24d3</Field>
+				<Field>1/0:f4d310e2-0f2f-4295-a651-0b1cc26c252b</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПолноеИмяОбработки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полное имя обработки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РежимРаботыСписком" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы со списком</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РежимРаботыСписком</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="РежимРаботыЭлемент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элемент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы с элементом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РежимРаботыЭлемент</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
