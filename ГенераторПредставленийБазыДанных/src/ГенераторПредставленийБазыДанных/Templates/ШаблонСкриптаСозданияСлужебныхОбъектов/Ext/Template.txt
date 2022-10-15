@@ -1,0 +1,63 @@
+﻿-- Функция преобразования значения булево из SQL в 1С
+IF OBJECT_ID('dbo.fn_ConvertBoolean_FromSqlTo1C') IS NOT NULL
+  DROP FUNCTION fn_ConvertBoolean_FromSqlTo1C
+GO
+CREATE FUNCTION [dbo].[fn_ConvertBoolean_FromSqlTo1C] 
+(
+	@boolValue binary(1)
+)
+RETURNS bit
+AS
+BEGIN
+	RETURN CASE WHEN @boolValue = 0x00 THEN 0 ELSE 1 END
+END
+GO
+
+-- Функция преобразования значения булево из 1С в SQL
+IF OBJECT_ID('dbo.fn_ConvertBoolean_From1CToSql') IS NOT NULL
+  DROP FUNCTION fn_ConvertBoolean_From1CToSql
+GO
+
+CREATE FUNCTION [dbo].[fn_ConvertBoolean_From1CToSql] 
+(
+	@boolValue bit
+)
+RETURNS binary(1)
+AS
+BEGIN
+	RETURN CASE WHEN @boolValue = 0 THEN 0x00 ELSE 0x01 END
+END
+GO
+
+-- Функция преобразования значения GUID из SQL в 1С
+IF OBJECT_ID('dbo.fn_ConvertGuid_FromSqlTo1C') IS NOT NULL
+  DROP FUNCTION fn_ConvertGuid_FromSqlTo1C
+GO
+CREATE FUNCTION [dbo].[fn_ConvertGuid_FromSqlTo1C] 
+(
+	@guid binary(16)
+)
+RETURNS nvarchar(36)
+AS
+BEGIN
+	RETURN CAST(CAST(CAST(REVERSE(SUBSTRING(@guid, 9, 8)) AS binary(8)) + SUBSTRING(@guid, 1, 8) AS uniqueidentifier) AS nvarchar(36))
+END
+GO
+
+-- Функция преобразования значения GUID из 1C в SQL
+IF OBJECT_ID('dbo.fn_ConvertGuid_From1CToSql') IS NOT NULL
+  DROP FUNCTION fn_ConvertGuid_From1CToSql
+GO
+CREATE FUNCTION [dbo].[fn_ConvertGuid_From1CToSql] 
+(
+	@guid nvarchar(36)
+)
+RETURNS binary(16)
+AS
+BEGIN
+	DECLARE @guidForConvert nvarchar(36);
+	SET @guidForConvert = LOWER(@guid);
+
+	RETURN CONVERT(binary(16), '0x'+SUBSTRING(@guidForConvert,20,4)+SUBSTRING(@guidForConvert,25,13)+SUBSTRING(@guidForConvert,15,4)+SUBSTRING(@guidForConvert,10,4)+SUBSTRING(@guid,1,8), 1);
+END
+GO

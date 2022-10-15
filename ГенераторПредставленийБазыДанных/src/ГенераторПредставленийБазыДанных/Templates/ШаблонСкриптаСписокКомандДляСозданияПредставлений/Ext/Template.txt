@@ -1,0 +1,35 @@
+﻿SELECT
+	UPPER(t.name) AS [TableName],
+	t.name AS [TableNameOrigin],
+	
+-- Удаление существующих представлений
+N'IF EXISTS(
+	SELECT 1 FROM sys.objects 
+	WHERE name = N''v_{{' + UPPER(t.name) + N'}}'' AND type = N''V'') 
+BEGIN 
+	DROP VIEW [v_{{' + UPPER(t.name) + '}}] 
+END' AS [DropViewIfExistCommand],
+
+-- Создание представления
+N'CREATE VIEW [v_{{' + UPPER(t.name) + N'}}] 
+AS 
+SELECT 
+	' + 
+STUFF(
+(SELECT N',' + c.name + ' AS [{{' + UPPER(t.name) + UPPER(c.name) + '}}]'
+FROM
+	sys.columns AS c
+WHERE 
+	c.OBJECT_ID = t.OBJECT_ID
+ORDER BY
+	column_id
+FOR XML PATH(''), TYPE).value('.',N'nvarchar(max)')
+,1,1,N'')
++ N' 
+FROM [{ИмяИсходнойБазы}].[dbo].[' + t.name + N'] WITH(NOLOCK);
+' AS [CreateViewCommand]
+
+FROM sys.tables AS t
+WHERE NOT t.[name] IN (
+	{СписокТаблицДляПереносаКакЕсть}
+)

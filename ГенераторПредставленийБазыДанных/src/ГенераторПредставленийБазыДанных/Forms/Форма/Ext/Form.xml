@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Width>100</Width>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>None</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnSaveDataInSettingsAtServer">ПриСохраненииДанныхВНастройкахНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаОсновнаяПанель" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаОсновнаяПанельРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Page name="ГруппаНастройкиПодключения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки подключения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаНастройкиПодключенияРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиПодключенияЛевая" id="122">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки подключения левая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки подключения левая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиПодключенияЛеваяРасширеннаяПодсказка" id="123"/>
+							<ChildItems>
+								<InputField name="Сервер" id="5">
+									<DataPath>Объект.Сервер</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="СерверКонтекстноеМеню" id="6"/>
+									<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="7"/>
+								</InputField>
+								<InputField name="ИмяБазыКопииТолькоДляЧтения" id="26">
+									<DataPath>Объект.ИсходнаяБазаДанных</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Исходная база данных</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ContextMenu name="ИмяБазыКопииТолькоДляЧтенияКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ИмяБазыКопииТолькоДляЧтенияРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<UsualGroup name="ГруппаНастройкиПодключенияЛеваяДополнительно" id="128">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные настройки подключения</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные настройки подключения</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиПодключенияЛеваяДополнительноРасширеннаяПодсказка" id="129"/>
+									<ChildItems>
+										<CheckBoxField name="АутентификацияNTLM" id="14">
+											<DataPath>Объект.АутентификацияNTLM</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="АутентификацияNTLMКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="АутентификацияNTLMРасширеннаяПодсказка" id="16"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаНастройкиПодключенияПравая" id="124">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки подключения правая</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки подключения правая</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиПодключенияПраваяРасширеннаяПодсказка" id="125"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНастройкиПодключенияПраваяПользовательИТаймаут" id="130">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь и таймаут</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователь и таймаут</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкиПодключенияПраваяПользовательИТаймаутРасширеннаяПодсказка" id="131"/>
+									<ChildItems>
+										<InputField name="ИмяПользователя" id="8">
+											<DataPath>Объект.ИмяПользователя</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ИмяПользователяКонтекстноеМеню" id="9"/>
+											<ExtendedTooltip name="ИмяПользователяРасширеннаяПодсказка" id="10"/>
+										</InputField>
+										<InputField name="ТаймаутПодключенияСекунд" id="20">
+											<DataPath>Объект.ТаймаутПодключенияСекунд</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таймаут (сек.)</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ТаймаутПодключенияСекундКонтекстноеМеню" id="21"/>
+											<ExtendedTooltip name="ТаймаутПодключенияСекундРасширеннаяПодсказка" id="22"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПарольИСохранение" id="120">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пароль и сохранение</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа пароль и сохранение</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПарольИСохранениеРасширеннаяПодсказка" id="121"/>
+									<ChildItems>
+										<InputField name="Пароль" id="11">
+											<DataPath>Объект.Пароль</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ContextMenu name="ПарольКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="13"/>
+										</InputField>
+										<CheckBoxField name="СохранятьПароль" id="23">
+											<DataPath>Объект.СохранятьПароль</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="СохранятьПарольКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="СохранятьПарольРасширеннаяПодсказка" id="25"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ПроверитьПодключение" id="126">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПроверитьПодключениеКИсходнойБазеДанных</CommandName>
+									<ExtendedTooltip name="ПроверитьПодключениеРасширеннаяПодсказка" id="127"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаНастройкиСозданияПредставлений" id="29">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки создания представлений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки создания представлений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаНастройкиСозданияПредставленийРасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаНастройкиСозданияПредставленийОсновныеНастройки" id="115">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основные настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Основные настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаНастройкиСозданияПредставленийОсновныеНастройкиРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<InputField name="ИмяБазыАдаптированнойДляИспользования" id="31">
+									<DataPath>Объект.ИмяБазыДляПредставлений</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Имя базы для представлений</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>База данных, которая будет использоваться для доступа к реплике в режиме "Только для чтения"</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<ContextMenu name="ИмяБазыАдаптированнойДляИспользованияКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ИмяБазыАдаптированнойДляИспользованияРасширеннаяПодсказка" id="33"/>
+								</InputField>
+								<Button name="ПроверитьПодключениеКАдаптированнойБазеДанных" id="134">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПроверитьПодключениеКАдаптированнойБазеДанных</CommandName>
+									<ExtendedTooltip name="ПроверитьПодключениеКАдаптированнойБазеДанныхРасширеннаяПодсказка" id="135"/>
+								</Button>
+								<LabelDecoration name="ГруппаАдаптированнаяБазаДаныхОсновныеНастройкиОтступление" id="117">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ГруппаАдаптированнаяБазаДаныхОсновныеНастройкиОтступлениеКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="ГруппаАдаптированнаяБазаДаныхОсновныеНастройкиОтступлениеРасширеннаяПодсказка" id="119"/>
+								</LabelDecoration>
+								<CheckBoxField name="УдалятьУстаревшиеОбъекты" id="34">
+									<DataPath>Объект.УдалятьУстаревшиеОбъекты</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Перед созданием актуальных таблиц и представлений будут удалены все предыдущие версии объектов. Рекомендуется оставлять эту опцию включенной для избавления от мусора в базе.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="УдалятьУстаревшиеОбъектыКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="УдалятьУстаревшиеОбъектыРасширеннаяПодсказка" id="36"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="НастройкиОбработкиТаблиц" id="37">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.НастройкиОбработкиТаблиц</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SelectAll</ExcludedCommand>
+								<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="НастройкиОбработкиТаблицКонтекстноеМеню" id="38"/>
+							<AutoCommandBar name="НастройкиОбработкиТаблицКоманднаяПанель" id="39">
+								<ChildItems>
+									<Button name="НастройкиОбработкиТаблицЗаполнитьНастройкиОбъектовБазыПоУмолчанию" id="132">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗаполнитьНастройкиОбъектовБазыПоУмолчанию</CommandName>
+										<ExtendedTooltip name="НастройкиОбработкиТаблицЗаполнитьНастройкиОбъектовБазыПоУмолчаниюРасширеннаяПодсказка" id="133"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="НастройкиОбработкиТаблицРасширеннаяПодсказка" id="40"/>
+							<SearchStringAddition name="НастройкиОбработкиТаблицСтрокаПоиска" id="41">
+								<AdditionSource>
+									<Item>НастройкиОбработкиТаблиц</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиОбработкиТаблицСтрокаПоискаКонтекстноеМеню" id="42"/>
+								<ExtendedTooltip name="НастройкиОбработкиТаблицСтрокаПоискаРасширеннаяПодсказка" id="43"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="НастройкиОбработкиТаблицСостояниеПросмотра" id="44">
+								<AdditionSource>
+									<Item>НастройкиОбработкиТаблиц</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиОбработкиТаблицСостояниеПросмотраКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="НастройкиОбработкиТаблицСостояниеПросмотраРасширеннаяПодсказка" id="46"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="НастройкиОбработкиТаблицУправлениеПоиском" id="47">
+								<AdditionSource>
+									<Item>НастройкиОбработкиТаблиц</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="НастройкиОбработкиТаблицУправлениеПоискомКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="НастройкиОбработкиТаблицУправлениеПоискомРасширеннаяПодсказка" id="49"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="НастройкиОбработкиТаблицНомерСтроки" id="50">
+									<DataPath>Объект.НастройкиОбработкиТаблиц.LineNumber</DataPath>
+									<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>1</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="НастройкиОбработкиТаблицНомерСтрокиКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="НастройкиОбработкиТаблицНомерСтрокиРасширеннаяПодсказка" id="52"/>
+								</LabelField>
+								<ColumnGroup name="НастройкиОбработкиТаблицГруппаТаблицаИМетаданные" id="107">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица и метаданные</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Таблица и метаданные</v8:content>
+										</v8:item>
+									</ToolTip>
+									<TitleBackColor>style:ToolTipBackColor</TitleBackColor>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="НастройкиОбработкиТаблицГруппаТаблицаИМетаданныеРасширеннаяПодсказка" id="108"/>
+									<ChildItems>
+										<InputField name="НастройкиОбработкиТаблицИмяТаблицыБазыДанных" id="53">
+											<DataPath>Объект.НастройкиОбработкиТаблиц.ИмяТаблицыБазыДанных</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Таблица</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиОбработкиТаблицИмяТаблицыБазыДанныхКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="НастройкиОбработкиТаблицИмяТаблицыБазыДанныхРасширеннаяПодсказка" id="55"/>
+										</InputField>
+										<InputField name="НастройкиОбработкиТаблицИмяМетаданных" id="56">
+											<DataPath>Объект.НастройкиОбработкиТаблиц.ИмяМетаданных</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Метаданные</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиОбработкиТаблицИмяМетаданныхКонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="НастройкиОбработкиТаблицИмяМетаданныхРасширеннаяПодсказка" id="58"/>
+										</InputField>
+										<InputField name="НастройкиОбработкиТаблицНазначениеМетаданных" id="144">
+											<DataPath>Объект.НастройкиОбработкиТаблиц.НазначениеМетаданных</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Назначение</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="НастройкиОбработкиТаблицНазначениеМетаданныхКонтекстноеМеню" id="145"/>
+											<ExtendedTooltip name="НастройкиОбработкиТаблицНазначениеМетаданныхРасширеннаяПодсказка" id="146"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСкрипты" id="83">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скрипты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скрипты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСкриптыРасширеннаяПодсказка" id="84"/>
+					<ChildItems>
+						<Pages name="ГруппаСкриптыПоШагам" id="85">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скрипты по шагам</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скрипты по шагам</v8:content>
+								</v8:item>
+							</ToolTip>
+							<PagesRepresentation>TabsOnLeftHorizontal</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаСкриптыПоШагамРасширеннаяПодсказка" id="86"/>
+							<ChildItems>
+								<Page name="ГруппаСкриптСозданияБазыДанных" id="87">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1. Создания базы данных</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1. Создания базы данных</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСкриптСозданияБазыДанныхРасширеннаяПодсказка" id="88"/>
+									<ChildItems>
+										<Button name="СформироватьСкриптСозданияБазыДанных" id="136">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СформироватьСкрипт</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сформировать скрипт</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СформироватьСкриптСозданияБазыДанныхРасширеннаяПодсказка" id="137"/>
+										</Button>
+										<InputField name="СкриптСозданияБазыДанных" id="89">
+											<DataPath>Объект.СкриптСозданияБазыДанных</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<ContextMenu name="СкриптСозданияБазыДанныхКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="СкриптСозданияБазыДанныхРасширеннаяПодсказка" id="91"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСкриптУдаленияУстаревшихОбъектов" id="92">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>2. Удаление устаревших объектов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>2. Удаление устаревших объектов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСкриптУдаленияУстаревшихОбъектовРасширеннаяПодсказка" id="93"/>
+									<ChildItems>
+										<Button name="СформироватьСкриптУдаленияУстаревшихОбъектов" id="138">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СформироватьСкрипт</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сформировать скрипт</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СформироватьСкриптУдаленияУстаревшихОбъектовРасширеннаяПодсказка" id="139"/>
+										</Button>
+										<InputField name="СкриптУдаленияВсехОбъектовПредыдущейВерсии" id="94">
+											<DataPath>Объект.СкриптУдаленияВсехОбъектовПредыдущейВерсии</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<ContextMenu name="СкриптУдаленияВсехОбъектовПредыдущейВерсииКонтекстноеМеню" id="95"/>
+											<ExtendedTooltip name="СкриптУдаленияВсехОбъектовПредыдущейВерсииРасширеннаяПодсказка" id="96"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСкриптПодготовкиПредставлений" id="102">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>3. Подготовка представлений</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>3. Подготовка представлений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСкриптПодготовкиПредставленийРасширеннаяПодсказка" id="103"/>
+									<ChildItems>
+										<Button name="СформироватьСкриптПодготовкиПредставлений" id="142">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СформироватьСкрипт</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сформировать скрипт</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СформироватьСкриптПодготовкиПредставленийРасширеннаяПодсказка" id="143"/>
+										</Button>
+										<InputField name="СкриптСозданияПредставлений" id="104">
+											<DataPath>Объект.СкриптСозданияПредставлений</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<ContextMenu name="СкриптСозданияПредставленийКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="СкриптСозданияПредставленийРасширеннаяПодсказка" id="106"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСкриптСозданияСлужебныхОбъектов" id="147">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>4. Служебные объекты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Служебные объекты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСкриптСозданияСлужебныхОбъектовРасширеннаяПодсказка" id="148"/>
+									<ChildItems>
+										<Button name="СформироватьСкриптСозданияСлужебныхОбъектов" id="152">
+											<Type>Hyperlink</Type>
+											<CommandName>Form.Command.СформироватьСкрипт</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сформировать скрипт</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СформироватьСкриптСозданияСлужебныхОбъектовРасширеннаяПодсказка" id="153"/>
+										</Button>
+										<InputField name="СкриптСозданияСлужебныхОбъектов" id="149">
+											<DataPath>Объект.СкриптСозданияСлужебныхОбъектов</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<MultiLine>true</MultiLine>
+											<ContextMenu name="СкриптСозданияСлужебныхОбъектовКонтекстноеМеню" id="150"/>
+											<ExtendedTooltip name="СкриптСозданияСлужебныхОбъектовРасширеннаяПодсказка" id="151"/>
+										</InputField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ГенераторПредставленийБазыДанных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>1/0:9d7e57ce-8be9-43d4-8c80-313aecf490ef</Field>
+				<Field>Объект.АутентификацияNTLM</Field>
+				<Field>Объект.ИмяБазыДляПредставлений</Field>
+				<Field>Объект.ИмяПользователя</Field>
+				<Field>Объект.ИсходнаяБазаДанных</Field>
+				<Field>Объект.Пароль</Field>
+				<Field>Объект.Сервер</Field>
+				<Field>Объект.СохранятьПароль</Field>
+				<Field>Объект.ТаймаутПодключенияСекунд</Field>
+				<Field>Объект.УдалятьУстаревшиеОбъекты</Field>
+			</Save>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицИмяТаблицыБазыДанных</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицИмяМетаданных</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицНазначениеМетаданных</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицСоздатьТаблицу</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицСоздатьПредставление</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицСоздатьЗащитуВставкиНовыхЗначений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицСоздатьЗащитуОбновленияЗначений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицСоздатьЗащитуУдаленияЗначений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицПоказыватьОшибкуПриВставкеНовыхЗначений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицПоказыватьОшибкуПриОбновленииЗначений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицПоказыватьОшибкуПриУдаленииЗначений</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицПерезаполнятьТаблицуПриОбновлении</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>НастройкиОбработкиТаблицПредопределеннаяНастройка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.НастройкиОбработкиТаблиц.ПредопределеннаяНастройка</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:ДатаГрафикаИзмененнаяФон</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПроверитьПодключениеКИсходнойБазеДанных" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение к исходной базе данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодключениеКИсходнойБазеДанных</Action>
+		</Command>
+		<Command name="ЗаполнитьНастройкиОбъектовБазыПоУмолчанию" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить настройки объектов базы по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить настройки объектов базы по умолчанию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьНастройкиОбъектовБазыПоУмолчанию</Action>
+		</Command>
+		<Command name="ПроверитьПодключениеКАдаптированнойБазеДанных" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить подключение к адаптированной базе данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьПодключениеКАдаптированнойБазеДанных</Action>
+		</Command>
+		<Command name="СформироватьСкрипт" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать скрипт</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать скрипт</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьСкрипт</Action>
+		</Command>
+	</Commands>
+</Form>

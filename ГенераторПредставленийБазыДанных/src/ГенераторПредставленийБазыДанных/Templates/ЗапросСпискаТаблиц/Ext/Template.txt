@@ -1,0 +1,6 @@
+﻿SELECT  
+	o.[name] AS [TableName],
+	UPPER(o.[name]) AS [TableNameUppercase]
+FROM sys.objects o
+WHERE o.[Type] = 'U' -- User table 
+ORDER BY o.[name];
