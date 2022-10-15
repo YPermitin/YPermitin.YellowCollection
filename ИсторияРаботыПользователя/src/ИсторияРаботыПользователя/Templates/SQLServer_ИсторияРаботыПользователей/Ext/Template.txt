@@ -1,0 +1,6 @@
+﻿SELECT 
+      CONVERT(varchar(max), _UserID, 1) AS _UserID,
+	  FORMAT(_Date, 'yyyyMMddhhmmss') AS _Date,
+      _URL
+  FROM _UsersWorkHistory
+  WHERE @_UserID
