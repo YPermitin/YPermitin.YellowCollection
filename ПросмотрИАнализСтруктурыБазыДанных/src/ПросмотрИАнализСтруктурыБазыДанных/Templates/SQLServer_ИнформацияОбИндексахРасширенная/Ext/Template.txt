@@ -1,0 +1,33 @@
+﻿SELECT 
+        o.Name AS TableName,
+        i.Name AS IndexName,
+		[is].IndexSizeKB,		
+		i.is_unique AS [IsUnique]
+FROM    sys.objects o
+        INNER JOIN sys.indexes i 
+			ON o.object_id = i.object_id
+		LEFT JOIN sys.dm_db_index_physical_stats(DB_ID(), null, null, null, null) AS [IF]
+			ON i.object_id = [IF].object_id AND i.index_id = [IF].index_id
+		LEFT JOIN (
+			SELECT
+				[ObjectId]
+				,[IndexId]
+				,CONVERT(DECIMAL(16, 1), (SUM([avg_record_size_in_bytes] * [record_count]) / 1024.0)) AS [IndexSizeKB]
+			FROM (
+				SELECT DISTINCT
+					OBJECT_ID AS ObjectId
+					,Index_ID AS IndexId
+					,avg_record_size_in_bytes
+					,record_count
+				FROM sys.dm_db_index_physical_stats(db_id(), NULL, NULL, NULL, 'detailed')
+				WHERE OBJECT_ID IS NOT NULL
+				) T
+			GROUP BY
+				ObjectId
+				,IndexId
+			) AS [is]
+			ON i.object_id = [is].ObjectId AND i.index_id = [is].IndexId
+WHERE i.[Name] IS NOT NULL
+	AND o.Type = 'U' 
+ORDER BY o.NAME ,
+        i.name;

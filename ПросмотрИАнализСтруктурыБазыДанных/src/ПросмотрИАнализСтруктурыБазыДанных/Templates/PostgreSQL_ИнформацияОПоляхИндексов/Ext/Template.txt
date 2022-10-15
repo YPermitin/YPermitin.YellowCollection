@@ -1,0 +1,29 @@
+﻿select 
+	table_name,
+    index_name,
+    column_name,
+	column_order
+from (
+    select
+        t.relname as table_name,
+        i.relname as index_name,
+        a.attname as column_name,
+        unnest(ix.indkey) as unn,
+        a.attnum,
+		generate_subscripts(ix.indkey,1) as column_order
+    from
+        pg_class t,
+        pg_class i,
+        pg_index ix,
+        pg_attribute a
+    where
+        t.oid = ix.indrelid
+        and i.oid = ix.indexrelid
+        and a.attrelid = t.oid
+        and a.attnum = ANY(ix.indkey)
+        and t.relkind = 'r'
+    order by
+        t.relname,
+        i.relname,
+        generate_subscripts(ix.indkey,1)) sb
+where unn = attnum

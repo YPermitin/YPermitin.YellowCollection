@@ -1,0 +1,15 @@
+﻿SELECT 
+     TableName = t.name,
+     IndexName = ind.name,
+     ColumnName = col.name,
+	 KeyOrdinal = ic.key_ordinal
+FROM 
+     sys.indexes ind 
+INNER JOIN 
+     sys.index_columns ic ON  ind.object_id = ic.object_id and ind.index_id = ic.index_id 
+INNER JOIN 
+     sys.columns col ON ic.object_id = col.object_id and ic.column_id = col.column_id 
+INNER JOIN 
+     sys.tables t ON ind.object_id = t.object_id 
+GROUP BY t.name, ind.name, col.name, ic.key_ordinal
+ORDER BY t.name, ind.name, ic.key_ordinal

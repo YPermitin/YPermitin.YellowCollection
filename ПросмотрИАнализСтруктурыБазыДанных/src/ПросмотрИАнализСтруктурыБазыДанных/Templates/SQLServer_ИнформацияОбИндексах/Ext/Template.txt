@@ -1,0 +1,19 @@
+﻿select 
+	t.[name] as table_name, 
+	i.[name] as index_name,    
+	substring(column_names, 1, len(column_names)-1) as [columns]
+from sys.objects t
+    inner join sys.indexes i
+        on t.object_id = i.object_id
+    cross apply (select col.[name] + ','
+                    from sys.index_columns ic
+                        inner join sys.columns col
+                            on ic.object_id = col.object_id
+                            and ic.column_id = col.column_id
+                    where ic.object_id = t.object_id
+                        and ic.index_id = i.index_id
+                            order by ic.key_ordinal
+                            for xml path ('') ) D (column_names)
+where t.is_ms_shipped <> 1
+and index_id > 0
+order by i.[name]

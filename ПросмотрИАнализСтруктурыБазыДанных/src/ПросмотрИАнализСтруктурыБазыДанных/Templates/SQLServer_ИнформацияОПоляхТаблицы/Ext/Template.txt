@@ -1,0 +1,15 @@
+﻿SELECT
+        isc.Table_Name AS TableName ,
+        isc.Table_Schema AS SchemaName ,
+        Ordinal_Position AS  Ord ,
+        Column_Name ,
+        Data_Type ,
+        Numeric_Precision AS  Prec ,
+        Numeric_Scale AS  Scale ,
+		-- -1 means MAX like Varchar(MAX) 
+        Character_Maximum_Length AS LEN ,
+        Is_Nullable
+FROM INFORMATION_SCHEMA.COLUMNS isc
+        INNER JOIN  information_schema.tables ist
+              ON isc.table_name = ist.table_name 
+ORDER BY Ord;  
