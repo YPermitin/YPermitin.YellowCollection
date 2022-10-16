@@ -1,0 +1,939 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<Width>80</Width>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаИзменитьРежимПолнотекстовогоПоиска" id="69">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ИзменитьРежимПолнотекстовогоПоиска</CommandName>
+				<ExtendedTooltip name="ФормаИзменитьРежимПолнотекстовогоПоискаРасширеннаяПодсказка" id="70"/>
+			</Button>
+			<Button name="ФормаВернутьсяКПанелиУправления" id="133">
+				<Type>CommandBarButton</Type>
+				<Visible>false</Visible>
+				<CommandName>Form.Command.ВернутьсяКПанелиУправления</CommandName>
+				<ExtendedTooltip name="ФормаВернутьсяКПанелиУправленияРасширеннаяПодсказка" id="134"/>
+			</Button>
+			<Button name="ФормаСформироватьОтчет" id="135">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СформироватьОтчет</CommandName>
+				<ExtendedTooltip name="ФормаСформироватьОтчетРасширеннаяПодсказка" id="136"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаОсновнаяПанель" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основная панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаОсновнаяПанельРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="ГруппаПолнотекстовыйПоискНедоступен" id="41">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Недоступен</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="42"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПолнотекстовыйПоискНедоступенПравая" id="46">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка1" id="47"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступЛевыйПолнотекстовыйПоискНедоступен" id="55">
+									<Enabled>false</Enabled>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню1" id="56"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка1" id="57"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПолнотекстовыйПоискНедоступенЦентр" id="61">
+							<Group>Vertical</Group>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка3" id="62"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступВерхПолнотекстовыйПоискНедоступен" id="63">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню3" id="64"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка3" id="65"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияПолнотекстовыйПоискНедоступен" id="43">
+									<Title formatted="true">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt;Полнотекстовый&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt;поиск&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt;недоступен&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt;для&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;fontsize 18&gt;&lt;colorstyle -16&gt;использования&lt;/&gt;&lt;/&gt;&lt;/&gt;
+</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Включите использование полнотекстового поиска для доступа к настройкам.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<BackColor>style:ToolTipBackColor</BackColor>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="45"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияОтступНизПолнотекстовыйПоискНедоступен" id="66">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню4" id="67"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка4" id="68"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПолнотекстовыйПоискНедоступенЛевая" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Полнотекстовый поиск недоступен</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка2" id="49"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступПравыйПолнотекстовыйПоискНедоступен" id="58">
+									<Enabled>false</Enabled>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Декорация2КонтекстноеМеню2" id="59"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка2" id="60"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаУправлениеПолнотекстовымПоиском" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Управление</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояние</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="ГруппаСостояниеРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаУправлениеПолнотекстовымПоискомЛевая" id="101">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка9" id="102"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаДатаАктуальности" id="74">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние полнотекстового индекса</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка4" id="75"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияДатаАктуальности" id="76">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;b&gt;&lt;colorstyle -14&gt;Индекс&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt; &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt;полнотекстового&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt; &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt;поиска&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt; &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt;никогда&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt; &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt;не&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt; &lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;colorstyle -14&gt;обновлялся.&lt;/&gt;&lt;/&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация1КонтекстноеМеню1" id="77"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка1" id="78"/>
+										</LabelDecoration>
+										<LabelField name="ИндексАктуален" id="4">
+											<DataPath>Объект.ИндексАктуален</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояние обновления</v8:content>
+												</v8:item>
+											</Title>
+											<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+											<TitleFont faceName="" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ='требует обновления'; БИ='все данные обновлены'</v8:content>
+												</v8:item>
+											</Format>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Font faceName="" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+											<ContextMenu name="ИндексАктуаленКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="ИндексАктуаленРасширеннаяПодсказка" id="6"/>
+										</LabelField>
+										<LabelField name="ОбновлениеИндексаЗавершено" id="7">
+											<DataPath>Объект.ОбновлениеИндексаЗавершено</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояние частичного и полного индекса</v8:content>
+												</v8:item>
+											</Title>
+											<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+											<TitleFont faceName="" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>БЛ='не актуально, требуется слияние частичного и полного индекса'; БИ='актуально, слияние полного и частичного индекса не требуется'</v8:content>
+												</v8:item>
+											</Format>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Font faceName="" height="8" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+											<ContextMenu name="ОбновлениеИндексаЗавершеноКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="ОбновлениеИндексаЗавершеноРасширеннаяПодсказка" id="9"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДополнительныеПараметрыИндексирования" id="95">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дополнительные параметры</v8:content>
+										</v8:item>
+									</Title>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка6" id="96"/>
+									<ChildItems>
+										<InputField name="КоличествоЗаданийИндексирования" id="10">
+											<DataPath>Объект.КоличествоЗаданийИндексирования</DataPath>
+											<TitleLocation>Left</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Максимальное количество фоновых заданий, которое может быть запущено одновременно для обновления индекса:
+- Если значение больше 1, то дополнительно могут быть запущены фоновые задания для индексирования, и их количество не будет превышать значение параметра. При порционном обновлении индекса, если количество не проиндексированных данных больше чем на одну порцию, то тогда также могут быть запущены фоновые задания для индексирования очередной порции.
+- Если значение равно 0, количество заданий подбирается автоматически.
+
+ВАЖНО! Настройка доступна с версии платформы 8.3.12. В режиме совместимости 8.3.11 и ниже значение 0 означает, что фоновые задания не используются.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КоличествоЗаданийИндексированияКонтекстноеМеню" id="11"/>
+											<ExtendedTooltip name="КоличествоЗаданийИндексированияРасширеннаяПодсказка" id="12"/>
+											<Events>
+												<Event name="OnChange">КоличествоЗаданийИндексированияПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="МаксимальныйРазмерИндексируемыхДанных" id="13">
+											<DataPath>Объект.МаксимальныйРазмерИндексируемыхДанных</DataPath>
+											<TitleLocation>Left</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Устанавливает максимальный размер индексируемых данных в байтах.
+Данные, размер которых превышает указанное значение, не индексируются.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="МаксимальныйРазмерИндексируемыхДанныхКонтекстноеМеню" id="14"/>
+											<ExtendedTooltip name="МаксимальныйРазмерИндексируемыхДанныхРасширеннаяПодсказка" id="15"/>
+											<Events>
+												<Event name="OnChange">МаксимальныйРазмерИндексируемыхДанныхПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="РежимРазделенияСоставныхСлов" id="19">
+											<DataPath>Объект.ТекущийРежимРазделенияСоставныхСлов</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Режим использования механизма разделения слов на значащие части при построении индекса полнотекстового поиска.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<ListChoiceMode>true</ListChoiceMode>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="РежимРазделенияСоставныхСловКонтекстноеМеню" id="20"/>
+											<ExtendedTooltip name="РежимРазделенияСоставныхСловРасширеннаяПодсказка" id="21"/>
+											<Events>
+												<Event name="OnChange">РежимРазделенияСоставныхСловПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаРасширеннаяИнформация" id="99">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Расширенная информация</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка8" id="100"/>
+									<ChildItems>
+										<InputField name="КаталогПолнотекстовогоИндекса" id="22">
+											<DataPath>Объект.КаталогПолнотекстовогоИндекса</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Путь к каталогу, где хранится индекс полнотекстового поиска и все необходимые служебные данные для его работы.
+
+Варианты:
+- Для клиент-серверного варианта работы этот каталог на ходится на сервере приложений.
+- Для файлового варианта каталог находится непосредственно в каталоге информационной базы. (Значение можно изменять вручную)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<WarningOnEditRepresentation>Show</WarningOnEditRepresentation>
+											<WarningOnEdit>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Рекомендуется указывать каталог индекса ППД вручную только в том случае, если он не определяется автоматически.</v8:content>
+												</v8:item>
+											</WarningOnEdit>
+											<EditMode>EnterOnInput</EditMode>
+											<OpenButton>true</OpenButton>
+											<ContextMenu name="КаталогПолнотекстовогоИндексаКонтекстноеМеню" id="23"/>
+											<ExtendedTooltip name="КаталогПолнотекстовогоИндексаРасширеннаяПодсказка" id="24"/>
+											<Events>
+												<Event name="OnChange">КаталогПолнотекстовогоИндексаПриИзменении</Event>
+												<Event name="Opening">КаталогПолнотекстовогоИндексаОткрытие</Event>
+											</Events>
+										</InputField>
+										<InputField name="РазмерПолнотекстовогоИндекса" id="25">
+											<DataPath>Объект.РазмерПолнотекстовогоИндекса</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Размер каталога полнотекстового индекса (в байтах)</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="РазмерПолнотекстовогоИндексаКонтекстноеМеню" id="26"/>
+											<ExtendedTooltip name="РазмерПолнотекстовогоИндексаРасширеннаяПодсказка" id="27"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаУправлениеПолнотекстовымПоискомПравая" id="103">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка10" id="104"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКомандыУправленияПолнотекстовымИндексом" id="79">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Управление</v8:content>
+										</v8:item>
+									</Title>
+									<Width>25</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Representation>StrongSeparation</Representation>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка5" id="80"/>
+									<ChildItems>
+										<Button name="ФормаОбновитьСостоянииПолнотекстовогоИндекса" id="34">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.ОбновитьИнформациюПолнотекстовогоПоиска</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обновить информацию</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ФормаОбновитьСостоянииПолнотекстовогоИндексаРасширеннаяПодсказка" id="35"/>
+										</Button>
+										<Button name="ПолноеОбновлениеПолнотекстовогоИндекса" id="81">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.ПолноеОбновлениеПолнотекстовогоИндекса</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Полное обновление</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="ПолноеОбновлениеПолнотекстовогоИндексаРасширеннаяПодсказка" id="82"/>
+										</Button>
+										<Button name="ЧастичноеОбновлениеПолнотекстовогоИндекса" id="83">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.ЧастичноеОбновлениеПолнотекстовогоИндекса</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Частичное обновление</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="ЧастичноеОбновлениеПолнотекстовогоИндексаРасширеннаяПодсказка" id="84"/>
+										</Button>
+										<Button name="СлияниеЧастичногоИПолногоПолнотекстовогоИндекса" id="85">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.СлияниеЧастичногоИПолногоПолнотекстовогоИндекса</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Слияние индекса</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="СлияниеЧастичногоИПолногоПолнотекстовогоИндексаРасширеннаяПодсказка" id="86"/>
+										</Button>
+										<Button name="ОчиститьПолнотекстовыйИндекс" id="87">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.ОчиститьПолнотекстовыйИндекс</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Очистить индекс</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="ОчиститьПолнотекстовыйИндексРасширеннаяПодсказка" id="88"/>
+										</Button>
+										<LabelDecoration name="ДекорацияОтступКомандыУправленияИндексом1" id="92">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Height>5</Height>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>false</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content> </v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="Декорация1КонтекстноеМеню3" id="93"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка3" id="94"/>
+										</LabelDecoration>
+										<Button name="СоставОбъектовПолнотекстовогоИндекса" id="109">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.СоставОбъектовПолнотекстовогоИндекса</CommandName>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="СоставОбъектовПолнотекстовогоИндексаРасширеннаяПодсказка" id="110"/>
+										</Button>
+										<Button name="ОчередьКОбновлениюПолнотекстовогоИндекса" id="105">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.ОчередьКОбновлениюПолнотекстовогоИндекса</CommandName>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="ОчередьКОбновлениюПолнотекстовогоИндексаРасширеннаяПодсказка" id="106"/>
+										</Button>
+										<Button name="ИнформацияОФайлахПолнотекстовогоИндекса" id="107">
+											<Type>UsualButton</Type>
+											<Width>25</Width>
+											<CommandName>Form.Command.ИнформацияОФайлахПолнотекстовогоИндекса</CommandName>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<ExtendedTooltip name="ИнформацияОФайлахПолнотекстовогоИндексаРасширеннаяПодсказка" id="108"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСоставОбъектовПолнотекстовогоПоиска" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состав объектов</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка7" id="112"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСоставОбъектовПолнотекстовогоПоискаПользовательскиеНастройки" id="113">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка11" id="114"/>
+							<ChildItems>
+								<Table name="СоставОбъектовПолнотекстовогоПоискаПользовательскиеНастройки" id="117">
+									<Autofill>true</Autofill>
+									<Height>5</Height>
+									<VerticalStretch>false</VerticalStretch>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>СоставОбъектовПолнотекстовогоПоиска.UserSettings</DataPath>
+									<ViewMode>All</ViewMode>
+									<ContextMenu name="КонтекстноеМеню" id="119"/>
+									<AutoCommandBar name="КоманднаяПанель" id="118">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="РасширеннаяПодсказка" id="120"/>
+									<SearchStringAddition name="Addition" id="121">
+										<AdditionSource>
+											<Item>СоставОбъектовПолнотекстовогоПоискаПользовательскиеНастройки</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ContextMenu" id="122"/>
+										<ExtendedTooltip name="ExtendedTooltip" id="123"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="Addition" id="127">
+										<AdditionSource>
+											<Item>СоставОбъектовПолнотекстовогоПоискаПользовательскиеНастройки</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ContextMenu" id="128"/>
+										<ExtendedTooltip name="ExtendedTooltip" id="129"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="Addition" id="124">
+										<AdditionSource>
+											<Item>СоставОбъектовПолнотекстовогоПоискаПользовательскиеНастройки</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ContextMenu" id="125"/>
+										<ExtendedTooltip name="ExtendedTooltip" id="126"/>
+									</SearchControlAddition>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСоставОбъектовПолнотекстовогоПоискаРезультат" id="115">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка12" id="116"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="СоставОбъектовПолнотекстовогоПоискаРезультат" id="130">
+									<DataPath>СоставОбъектовПолнотекстовогоПоискаРезультат</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ПолеКонтекстноеМеню" id="131"/>
+									<ExtendedTooltip name="ПолеРасширеннаяПодсказка" id="132"/>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаФайлыПолнотекстовогоИндекса" id="137">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа файлы полнотекстового индекса</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка13" id="138"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаФайлыПолнотекстовогоИндексаРезультат" id="141">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка15" id="142"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="ФайлыПолнотекстовогоИндексаРезультат" id="143">
+									<DataPath>ФайлыПолнотекстовогоИндексаРезультат</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ПолеКонтекстноеМеню1" id="144"/>
+									<ExtendedTooltip name="ПолеРасширеннаяПодсказка1" id="145"/>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОчередьКОбновлениюПолнотекстовогоИндекса" id="159">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очередь к обновлению</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка14" id="160"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаОчередьКОбновлениюПолнотекстовогоИндексаРезультат" id="161">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка16" id="162"/>
+							<ChildItems>
+								<SpreadSheetDocumentField name="ГруппаОчередьКОбновлениюПолнотекстовогоИндексаРезультат1" id="163">
+									<DataPath>ОчередьКОбновлениюПолнотекстовогоИндексаРезультат</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ПолеКонтекстноеМеню2" id="164"/>
+									<ExtendedTooltip name="ПолеРасширеннаяПодсказка2" id="165"/>
+								</SpreadSheetDocumentField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.МастерПолнотекстовогоПоиска</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="РежимПолнотекстовогоПоискаРазрешить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим полнотекстового поиска (разрешить)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимПолнотекстовогоПоискаЗапретить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим полнотекстового поиска (запретить)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СоставОбъектовПолнотекстовогоПоиска" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав объектов полнотекстового поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СоставОбъектовПолнотекстовогоПоискаРезультат" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлыПолнотекстовогоИндекса" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файлы полнотекстового индекса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ФайлыПолнотекстовогоИндексаРезультат" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав объектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчередьКОбновлениюПолнотекстовогоИндексаРезультат" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь к обновлению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОчередьКОбновлениюПолнотекстовогоИндекса" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь к обновлению</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьИнформациюПолнотекстовогоПоиска" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить информацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить состоянии полнотекстового индекса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьИнформациюПолнотекстовогоПоиска</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИзменитьРежимПолнотекстовогоПоиска" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ИзменитьРежимПолнотекстовогоПоиска</Action>
+		</Command>
+		<Command name="ПолноеОбновлениеПолнотекстовогоИндекса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Полное обновление полнотекстового индекса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняет полное пересоздание индекса полнотекстового поиска. ВАЖНО! Операция может занимать длительное время.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолноеОбновлениеПолнотекстовогоИндекса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЧастичноеОбновлениеПолнотекстовогоИндекса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Частичное обновление полнотекстового индекса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняет частичное обновление полнотекстового индекса по зарегистрированным ранее изменениям.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SwitchActivity</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЧастичноеОбновлениеПолнотекстовогоИндекса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СлияниеЧастичногоИПолногоПолнотекстовогоИндекса" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Слияние частичного и полного полнотекстового индекса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняет слияние полного и частичного полнотекстового индекса с частичным обновлением.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Rename</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СлияниеЧастичногоИПолногоПолнотекстовогоИндекса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчиститьПолнотекстовыйИндекс" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить полнотекстовый индекс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняет полную очистку каталога полнотекстового индекса.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьПолнотекстовыйИндекс</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ОчередьКОбновлениюПолнотекстовогоИндекса" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очередь к обновлению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataCompositionOrder</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчередьКОбновлениюПолнотекстовогоИндекса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ИнформацияОФайлахПолнотекстовогоИндекса" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация о файлах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробная информация о файлах в каталоге полнотекстового индекса.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Replace</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИнформацияОФайлахПолнотекстовогоИндекса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СоставОбъектовПолнотекстовогоИндекса" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав объектов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состав объектов метаданных и их настройки, задействованные в индексе полнотекстового поиска.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Enum</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоставОбъектовПолнотекстовогоИндекса</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ВернутьсяКПанелиУправления" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Меню</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВернутьсяКПанелиУправления</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СформироватьОтчет" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</Title>
+			<Action>СформироватьОтчет</Action>
+		</Command>
+	</Commands>
+</Form>
