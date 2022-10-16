@@ -1,0 +1,79 @@
+﻿SELECT
+	UPPER(t.name) AS [TableName],
+	
+-- Удаление существующих представлений
+N'IF EXISTS(
+	SELECT 1 FROM sys.objects 
+	WHERE name = N''' + t.name + N''' AND type = N''V'') 
+BEGIN 
+	DROP VIEW [' + t.name + '] 
+END' AS [DropViewIfExistCommand],
+
+-- Создание представления
+N'CREATE VIEW [' + t.name + N'] 
+AS 
+SELECT 
+	' + 
+STUFF(
+(SELECT N',' + c.name
+FROM
+	sys.columns AS c
+WHERE 
+	c.OBJECT_ID = t.OBJECT_ID
+ORDER BY
+	column_id
+FOR XML PATH(''), TYPE).value('.',N'nvarchar(max)')
+,1,1,N'')
++ N' 
+FROM [{ИмяИсходнойБазы}].[dbo].[' + t.name + N'];
+' AS [CreateViewCommand],
+
+-- Создание триггера запрета вставки значений
+N'CREATE TRIGGER [dbo].[read_only_' + t.name + N'_insert]
+   ON  [dbo].[' + t.name + N']
+   INSTEAD OF INSERT
+AS 
+BEGIN
+	SET NOCOUNT ON;
+	
+    {ДействиеПриДобавлении}
+END
+' AS [CreateTriggerBreakInsertCommand],
+
+-- Удалить триггер запрета вставки значений, если существует
+N'DROP TRIGGER IF EXISTS [read_only_' + t.name + N'_insert];' AS [DropTriggerIfExistBreakInsertCommand],
+
+-- Создание триггера запрета обновления значений
+N'CREATE TRIGGER [dbo].[read_only_' + t.name + N'_update]
+   ON  [dbo].[' + t.name + N']
+   INSTEAD OF UPDATE
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+    {ДействиеПриОбновлении}
+END
+' AS [CreateTriggerBreakUpdateCommand],
+
+-- Удалить триггер запрета вставки значений, если существует
+N'DROP TRIGGER IF EXISTS [read_only_' + t.name + N'_update];' AS [DropTriggerIfExistBreakUpdateCommand],
+
+-- Создание триггера запрета удаления значений
+N'CREATE TRIGGER [dbo].[read_only_' + t.name + N'_delete]
+   ON  [dbo].[' + t.name + N']
+   INSTEAD OF DELETE
+AS 
+BEGIN
+	SET NOCOUNT ON;
+
+    {ДействиеПриУдалении}
+END
+' AS [CreateTriggerBreakDeleteCommand],
+
+-- Удалить триггер запрета вставки значений, если существует
+N'DROP TRIGGER IF EXISTS [read_only_' + t.name + N'_delete];' AS [DropTriggerIfExistBreakDeleteCommand]
+
+FROM sys.tables AS t
+WHERE NOT t.[name] IN (
+	{СписокТаблицДляПереносаКакЕсть}
+)

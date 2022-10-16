@@ -1,0 +1,23 @@
+﻿IF NOT EXISTS(SELECT 1 FROM sys.databases WHERE name='{ИмяБазыДанных}')
+BEGIN
+    USE [master]
+
+    CREATE DATABASE [{ИмяБазыДанных}]
+
+    ALTER DATABASE [{ИмяБазыДанных}] MODIFY FILE
+    ( 
+        NAME = N'{ИмяБазыДанных}', 
+        SIZE = 512MB, 
+        MAXSIZE = UNLIMITED, 
+        FILEGROWTH = 1024KB 
+    )
+
+    ALTER DATABASE [{ИмяБазыДанных}] MODIFY FILE
+    ( 
+        NAME = N'{ИмяБазыДанных}_log', 
+        SIZE = 256MB, 
+        MAXSIZE = UNLIMITED, 
+        FILEGROWTH = 10% 
+    )
+END
+GO
